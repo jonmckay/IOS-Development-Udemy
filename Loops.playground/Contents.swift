@@ -17,11 +17,11 @@ var sum = 0
 
 // 99 bottles of beer on the wall
 
-func beerSong() -> String {
+func beerSong(withThisManyBottles : Int) -> String {
     var lyrics: String = ""
     
-        for number in 1...99 {
-            let newLine: String = "\n\(100 - number) bottles of beer on the wall, \(100 - number) bottles of beer. \nTake one down and pass it around, \(100 - number - 1) bottles of beer on the wall.\n"
+        for number in (1...withThisManyBottles).reversed() {
+            let newLine: String = "\n\(number) bottles of beer on the wall, \(number) bottles of beer. \nTake one down and pass it around, \(number - 1) bottles of beer on the wall.\n"
             lyrics += newLine
         }
     
@@ -30,6 +30,6 @@ func beerSong() -> String {
     return lyrics;
 }
 
-print(beerSong())
+print(beerSong(withThisManyBottles: 25))
 
 
