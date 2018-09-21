@@ -50,7 +50,13 @@ class ViewController: UIViewController {
     
     
     func checkAnswer() {
-        
+        let correctAnswer = allQuestions.list[0].answer
+        if pickedAnswer == correctAnswer {
+            print("You got it!")
+        }
+        else {
+            print("Wrong Answer")
+        }
     }
     
     
