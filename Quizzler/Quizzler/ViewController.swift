@@ -26,8 +26,7 @@ class ViewController: UIViewController {
         let firstQuestion = allQuestions.list[0]
         questionLabel.text = firstQuestion.questionText
     }
-
-
+        
     @IBAction func answerPressed(_ sender: AnyObject) {
         if sender.tag == 1 {
             pickedAnswer = true
@@ -42,22 +41,26 @@ class ViewController: UIViewController {
         nextQuestion()
     }
     
-    
     func updateUI() {
-      
+        
     }
     
-
     func nextQuestion() {
         if questionNumber <= 12 {
             questionLabel.text = allQuestions.list[questionNumber].questionText
         }
         else {
-            print("End of Quiz")
-            questionNumber = 0
+            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
+                self.startOver()
+            }
+            
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true, completion: nil)
         }
     }
-    
     
     func checkAnswer() {
         let correctAnswer = allQuestions.list[questionNumber].answer
@@ -71,9 +74,10 @@ class ViewController: UIViewController {
     
     
     func startOver() {
-       
+        questionNumber = 0
+        nextQuestion()
     }
     
-
+    
     
 }
