@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0AC87C21815B6F008CAF19 /* SelfDrivingCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0AC87B21815B6F008CAF19 /* SelfDrivingCar.swift */; };
 		0E54006C2176DB2100595B4B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54006B2176DB2100595B4B /* main.swift */; };
 		0E5400732176DB9900595B4B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5400722176DB9900595B4B /* Car.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E0AC87B21815B6F008CAF19 /* SelfDrivingCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDrivingCar.swift; sourceTree = "<group>"; };
 		0E5400682176DB2100595B4B /* Classes and Objects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Classes and Objects"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E54006B2176DB2100595B4B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0E5400722176DB9900595B4B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				0E54006B2176DB2100595B4B /* main.swift */,
 				0E5400722176DB9900595B4B /* Car.swift */,
+				0E0AC87B21815B6F008CAF19 /* SelfDrivingCar.swift */,
 			);
 			path = "Classes and Objects";
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5400732176DB9900595B4B /* Car.swift in Sources */,
+				0E0AC87C21815B6F008CAF19 /* SelfDrivingCar.swift in Sources */,
 				0E54006C2176DB2100595B4B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
