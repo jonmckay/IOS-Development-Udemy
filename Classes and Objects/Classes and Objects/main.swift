@@ -8,14 +8,7 @@
 
 import Foundation
 
-let myCar = Car()
-
 let mySelfDrivingCar = SelfDrivingCar()
-
-let someRichGuysCar = Car(customerChosenColor: "Red")
-
-myCar.drive()
 
 mySelfDrivingCar.drive()
 
-print(mySelfDrivingCar.color)
