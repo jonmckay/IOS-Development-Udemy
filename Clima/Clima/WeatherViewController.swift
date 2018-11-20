@@ -32,6 +32,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         
         //TODO:Set up the location manager here.
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
         
         
     }
