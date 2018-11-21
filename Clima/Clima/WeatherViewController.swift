@@ -15,7 +15,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //Constants
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    let APP_ID = "c7f7f25ce112dfb6fff415ca59289eb"
+    let APP_ID = "dc7f7f25ce112dfb6fff415ca59289eb"
     
 
     //TODO: Declare instance variables here
@@ -55,6 +55,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
                 
                 let weatherJSON : JSON = JSON(response.result.value!)
                 
+                
+                print(weatherJSON)
                 self.updateWeatherData(json: weatherJSON)
             }
             else {
@@ -86,6 +88,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
             weatherDataModel.condition = json["weather"][0]["id"].intValue
         
             weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            
+            updateUIWithWeatherData()
         }
         else {
             cityLabel.text = "Weather Unavailable"
@@ -100,7 +104,11 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     
     //Write the updateUIWithWeatherData method here:
-    
+    func updateUIWithWeatherData() {
+        cityLabel.text = weatherDataModel.city
+        temperatureLabel.text = String(weatherDataModel.temperature)
+        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+    }
     
     
     
