@@ -52,6 +52,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
             response in
             if response.result.isSuccess {
                 print("Success! Got the weather data")
+                
+                let weatherJSON : JSON = JSON(response.result.value!)
+                
+                print(weatherJSON)
             }
             else {
                 print("Error \(response.result.error)")
@@ -96,6 +100,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
             locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
             
             print("Longitude = \(location.coordinate.longitude), Latitude = \(location.coordinate.latitude)")
             
