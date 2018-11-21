@@ -55,7 +55,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
                 
                 let weatherJSON : JSON = JSON(response.result.value!)
                 
-                print(weatherJSON)
+                self.updateWeatherData(json: weatherJSON)
             }
             else {
                 print("Error \(response.result.error)")
@@ -75,7 +75,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
    
     
     //Write the updateWeatherData method here:
-    
+    func updateWeatherData(json : JSON) {
+        
+        let tempResults = json["main"]["temp"]
+    }
 
     
     
