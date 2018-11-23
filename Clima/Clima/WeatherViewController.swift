@@ -81,7 +81,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         
         if let tempResult = json["main"]["temp"].double {
             
-            weatherDataModel.temperature = Int(tempResult - 273.15)
+            weatherDataModel.temperature = Int(tempResult - 273.15) * (9/5) + 32
         
             weatherDataModel.city = json["name"].stringValue
         
