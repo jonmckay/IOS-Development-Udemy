@@ -40,6 +40,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return currencyArray[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(currencyArray[row])
+    }
     
 //    
 //    //MARK: - Networking
