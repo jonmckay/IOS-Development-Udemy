@@ -20,14 +20,15 @@ class MyApp {
         
         let firebase = Firebase()
         
-        firebase.createUser(username: "Jon", password: "123456", completion: completed)
+        firebase.createUser(username: "Jon", password: "123456") {
+            (isSuccess: Bool, userID: Int) in
+            
+            print("registration is successful: \(isSuccess)")
+            print("userID is: \(userID)")
+        }
     }
     
-    func completed (isSuccess: Bool, userID: Int) {
-        
-        print("registration is successful: \(isSuccess)")
-        print("userID is: \(userID)")
-    }
+    
 }
 
 
